@@ -1,20 +1,17 @@
-// Main module
 import gulp from 'gulp';
+import rename from 'gulp-rename';
+import del from 'del';
 
-// Import path from path.js
-import { path } from './path.js';
-
-// Pass value to global variables
-global.app = {
-  path: path,
-  gulp: gulp
+const deleteImages = () => {
+  return del(['build',], {force:true});
 }
 
-// Import tasks
-import { renameImages } from './tasks/renameImages.js';
+const renameImages = () => {
+    return gulp.src('src/images/*.{jpg,jpeg,png,gif,wepb}')
+    .pipe(rename({
+      // this code
+    }))
+    .pipe(gulp.dest('build'))
+}
 
-// Single task 
-export { renameImages }
-
-// Make default task
-gulp.task('default', renameImages);
+gulp.task('default', gulp.series(deleteImages, renameImages));
