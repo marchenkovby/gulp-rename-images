@@ -7,19 +7,13 @@
   "type": "module",
   "devDependencies": {
     "del": "^6.1.0",
-    "fancy-log": "^2.0.0",
     "gulp": "^4.0.2",
-    "gulp-rename": "^2.0.0"
+    "gulp-debug": "^4.0.0",
+    "gulp-rename": "^2.0.0",
+    "npm-max-dir-index": "^1.0.4",
+    "yargs": "^17.5.1"
   },
   "scripts": {
     "rename": "gulp"
-  },
-  "dependencies": {
-    "debug": "^4.3.4",
-    "fs": "0.0.1-security",
-    "glob": "^8.0.3",
-    "merge-stream": "^2.0.0",
-    "npm-max-dir-index": "^1.0.4",
-    "yargs": "^17.5.1"
   }
 }
