@@ -26,7 +26,7 @@ const renameImages = () => {
     }
 
     //template for article
-    if (indexArticle <= 9) {
+    if (indexArticle >= 1 && indexArticle <= 9) {
       templateArticle = '000' + indexArticle
     }
     else if (indexArticle > 9 && indexArticle <= 99){
@@ -37,6 +37,9 @@ const renameImages = () => {
     }
     else if (indexArticle > 999 && indexArticle <= 9999){
       templateArticle = indexArticle
+    }
+    else {
+      templateArticle = '0000'
     }
     
     // all templates
